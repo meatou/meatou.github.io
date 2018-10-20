@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>控制流程 | 米拓科技文档中心</title>
+    <meta name="description" content="我们即是数据">
+    
+    
+    <link rel="preload" href="/assets/css/styles.478860f5.css" as="style"><link rel="preload" href="/assets/js/app.478860f5.js" as="script"><link rel="preload" href="/assets/css/20.styles.217d5ab5.css" as="style"><link rel="preload" href="/assets/js/20.217d5ab5.js" as="script"><link rel="preload" href="/assets/js/7.03058d84.js" as="script"><link rel="prefetch" href="/assets/js/8.41a9db85.js"><link rel="prefetch" href="/assets/css/1.styles.1e042857.css"><link rel="prefetch" href="/assets/js/1.1e042857.js"><link rel="prefetch" href="/assets/css/2.styles.7d1b12bb.css"><link rel="prefetch" href="/assets/js/2.7d1b12bb.js"><link rel="prefetch" href="/assets/css/3.styles.5097f8c0.css"><link rel="prefetch" href="/assets/js/3.5097f8c0.js"><link rel="prefetch" href="/assets/js/4.f7e452c5.js"><link rel="prefetch" href="/assets/js/5.9f010cae.js"><link rel="prefetch" href="/assets/js/6.6197b124.js"><link rel="prefetch" href="/assets/js/9.6aecb2a7.js"><link rel="prefetch" href="/assets/js/10.bdb69f9e.js"><link rel="prefetch" href="/assets/js/11.f0cd68db.js"><link rel="prefetch" href="/assets/js/12.35b658b2.js"><link rel="prefetch" href="/assets/js/13.e96c0085.js"><link rel="prefetch" href="/assets/js/14.e098fd67.js"><link rel="prefetch" href="/assets/js/15.dc936536.js"><link rel="prefetch" href="/assets/js/16.574f91eb.js"><link rel="prefetch" href="/assets/js/17.9859a4e8.js"><link rel="prefetch" href="/assets/js/18.f387cd95.js"><link rel="prefetch" href="/assets/js/19.a66bba8c.js">
+    <link rel="stylesheet" href="/assets/css/1.styles.1e042857.css"><link rel="stylesheet" href="/assets/css/2.styles.7d1b12bb.css"><link rel="stylesheet" href="/assets/css/3.styles.5097f8c0.css"><link rel="stylesheet" href="/assets/css/styles.478860f5.css"><link rel="stylesheet" href="/assets/css/20.styles.217d5ab5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">米拓科技文档中心</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/APIdoc/" class="nav-link">API</a></div><div class="nav-item"><a href="/GO/" class="nav-link router-link-active">GO</a></div><div class="nav-item"><a href="/SQL/" class="nav-link">SQL</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/APIdoc/" class="nav-link">API</a></div><div class="nav-item"><a href="/GO/" class="nav-link router-link-active">GO</a></div><div class="nav-item"><a href="/SQL/" class="nav-link">SQL</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>API</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Golang</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/GO/" class="sidebar-link">Golang 简介</a></li><li><a href="/GO/DataType.html" class="sidebar-link">数据类型</a></li><li><a href="/GO/Variable&amp;Constant.html" class="sidebar-link">变量与常量</a></li><li><a href="/GO/ControlFlow.html" class="active sidebar-link">控制流程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/GO/ControlFlow.html#判断-if-else" class="sidebar-link">判断 IF...ELSE</a></li><li class="sidebar-sub-header"><a href="/GO/ControlFlow.html#多分支判断-switch" class="sidebar-link">多分支判断 switch</a></li><li class="sidebar-sub-header"><a href="/GO/ControlFlow.html#循环-for" class="sidebar-link">循环 for</a></li></ul></li><li><a href="/GO/DataType.html" class="sidebar-link">数据类型</a></li><li><a href="/GO/Array.html" class="sidebar-link">数组</a></li><li><a href="/GO/Slice.html" class="sidebar-link">切片</a></li><li><a href="/GO/Map.html" class="sidebar-link">字典</a></li><li><a href="/GO/Function.html" class="sidebar-link">函数</a></li><li><a href="/GO/Pointer.html" class="sidebar-link">指针</a></li><li><a href="/GO/Struct.html" class="sidebar-link">结构</a></li><li><a href="/GO/Interface.html" class="sidebar-link">接口</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>SQL</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="判断-if-else"><a href="#判断-if-else" aria-hidden="true" class="header-anchor">#</a> 判断 IF...ELSE</h2> <blockquote><p>if..else if..else 用来判断一个或者多个条件，然后根据条件的结果执行不同的程序块。</p></blockquote> <p>示例：标准写法</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token comment">// 语法：</span>
+ <span class="token keyword">var</span> 变量 <span class="token operator">=</span> 变量值
+    <span class="token keyword">if</span> 变量 <span class="token operator">&gt;</span> 条件<span class="token number">1</span> <span class="token punctuation">{</span>
+        执行语句<span class="token number">1</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> 变量 <span class="token operator">&gt;</span> 条件<span class="token number">2</span> <span class="token operator">&amp;&amp;</span> 变量 <span class="token operator">&lt;=</span> 条件<span class="token number">3</span> <span class="token punctuation">{</span>
+        执行语句<span class="token number">2</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        执行语句<span class="token number">3</span>
+    <span class="token punctuation">}</span>
+<span class="token comment">// 例子：</span>
+ <span class="token keyword">var</span> dog_age <span class="token operator">=</span> <span class="token number">10</span>
+    <span class="token keyword">if</span> dog_age <span class="token operator">&gt;</span> <span class="token number">10</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;A big dog&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> dog_age <span class="token operator">&gt;</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> dog_age <span class="token operator">&lt;=</span> <span class="token number">10</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;A small dog&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;A baby dog&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>示例：判断条件带括号</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token comment">// 语法：</span>
+<span class="token keyword">var</span> 变量<span class="token number">1</span> <span class="token operator">=</span> 变量值<span class="token number">1</span>
+<span class="token keyword">var</span> 变量<span class="token number">2</span> <span class="token operator">=</span> 变量值<span class="token number">2</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>变量<span class="token number">1</span> <span class="token operator">==</span> 条件<span class="token number">1</span> <span class="token operator">&amp;&amp;</span> 变量<span class="token number">2</span> <span class="token operator">==</span> 条件<span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        执行语句
+<span class="token punctuation">}</span>
+<span class="token comment">// 例子：</span>
+<span class="token keyword">var</span> dog_age <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword">var</span> dog_sex <span class="token operator">=</span> <span class="token string">'M'</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>dog_age <span class="token operator">==</span> <span class="token number">10</span> <span class="token operator">&amp;&amp;</span> dog_sex <span class="token operator">==</span> <span class="token string">'M'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;dog&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>提示</p> <blockquote><p>Go的if..else if..else语句的判断条件一般都不需要使用()。当然如果你还是愿意写，也是对的。另外如果为了将某两个或多个条件绑定在一起判断的话，还是需要括号()的。</p></blockquote> <blockquote><p>每个判断条件的结果要么是true要么是false，所以可以使用&amp;&amp;，||来连接不同的条件。使用!来对一个条件取反。</p></blockquote></blockquote> <h2 id="多分支判断-switch"><a href="#多分支判断-switch" aria-hidden="true" class="header-anchor">#</a> 多分支判断 switch</h2> <blockquote><p>switch的出现是为了解决某些情况下使用if判断语句带来的繁琐之处。</p></blockquote> <p>示例：</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token comment">// 语法：</span>
+<span class="token keyword">var</span> 变量 <span class="token operator">:=</span> 变量值
+<span class="token keyword">switch</span> 变量 <span class="token punctuation">{</span>
+<span class="token keyword">case</span> 条件<span class="token number">1</span><span class="token punctuation">:</span>
+    执行语句<span class="token number">1</span>
+<span class="token keyword">case</span> 条件<span class="token number">2</span><span class="token punctuation">:</span>
+    执行语句<span class="token number">2</span>
+<span class="token keyword">case</span> 条件<span class="token number">3</span><span class="token punctuation">:</span>
+    执行语句<span class="token number">3</span>
+<span class="token keyword">default</span><span class="token punctuation">:</span>
+    默认执行语句
+<span class="token punctuation">}</span>
+<span class="token comment">// 例子：</span>
+<span class="token keyword">var</span> score <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">69</span>
+<span class="token keyword">switch</span> score <span class="token operator">/</span> <span class="token number">10</span> <span class="token punctuation">{</span>
+<span class="token keyword">case</span> <span class="token number">10</span><span class="token punctuation">:</span>
+<span class="token keyword">case</span> <span class="token number">9</span><span class="token punctuation">:</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;优秀&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">case</span> <span class="token number">8</span><span class="token punctuation">:</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;良好&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">case</span> <span class="token number">7</span><span class="token punctuation">:</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;一般&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">case</span> <span class="token number">6</span><span class="token punctuation">:</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;及格&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">default</span><span class="token punctuation">:</span>
+    mt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;不及格&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>提示</p> <blockquote><p>switch的判断条件可以为任何数据类型。</p></blockquote> <blockquote><p>每个case后面跟的是一个完整的程序块，该程序块不需要{}，也不需要break结尾，因为每个case都是独立的。</p></blockquote> <blockquote><p>可以为switch提供一个默认选项default，在上面所有的case都没有满足的情况下，默认执行default后面的语句。</p></blockquote></blockquote> <h2 id="循环-for"><a href="#循环-for" aria-hidden="true" class="header-anchor">#</a> 循环 for</h2> <p>示例：标准写法</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token comment">// 语法：</span>
+<span class="token keyword">var</span> 变量 <span class="token builtin">int</span> <span class="token operator">=</span> 初始值
+<span class="token keyword">for</span> <span class="token punctuation">;</span> 变量 <span class="token operator">&lt;=</span> 阀值<span class="token punctuation">;</span> 变量<span class="token operator">++</span> <span class="token punctuation">{</span>
+    执行语句
+<span class="token punctuation">}</span>
+<span class="token comment">// 例子：</span>
+<span class="token keyword">var</span> i <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">for</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>示例：精简写法</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token comment">// 语法：</span>
+<span class="token keyword">for</span> 变量 <span class="token operator">:=</span> 初始值<span class="token punctuation">;</span> 变量 <span class="token operator">&lt;=</span> 阀值<span class="token punctuation">;</span> 变量<span class="token operator">++</span> <span class="token punctuation">{</span>
+    执行语句
+<span class="token punctuation">}</span>
+<span class="token comment">// 例子：</span>
+<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>示例：while写法</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token comment">// 语法：</span>
+<span class="token keyword">var</span> 变量 <span class="token builtin">int</span> <span class="token operator">=</span> 初始值
+<span class="token keyword">for</span> 变量 <span class="token operator">&lt;=</span> 阀值 <span class="token punctuation">{</span>
+    执行语句
+    变量<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 例子：</span>
+<span class="token keyword">var</span> i <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">for</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    i<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/GO/Variable&amp;Constant.html" class="prev">
+          变量与常量
+        </a></span> <span class="next"><a href="/GO/DataType.html">
+          数据类型
+        </a>
+        →
+      </span></p></div> </div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/20.217d5ab5.js" defer></script><script src="/assets/js/7.03058d84.js" defer></script><script src="/assets/js/app.478860f5.js" defer></script>
+  </body>
+</html>
